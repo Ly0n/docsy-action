@@ -13,6 +13,7 @@ jobs:
         with:
           submodules: recursive  # Fetch the Docsy theme
           fetch-depth: 3         # Fetch all history for .GitInfo and .Lastmod
+          branch: protontypes
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -40,3 +41,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
